@@ -97,6 +97,7 @@ public class HelloSinatraApp extends HttpServlet {
         Object rack_response = container.runScriptlet(calls_app);
         String body = (String)container.callMethod(rack_response, "getBody", String.class);
         response.getWriter().print(body);
+        container.clear();
     }
 
 }
